@@ -1,0 +1,12 @@
+#my_alert_div
+{
+	position: absolute;
+left: 20%;
+right: 20%;
+top: 40%;
+}
+#my_alert_div p
+{
+	text-align: center;
+	
+}

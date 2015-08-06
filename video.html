@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		
+		<style type="text/css">
+
+		</style>
+		
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="bootstrap-table/bootstrap-table.css" />
+		<link rel="stylesheet" href="css/my_progress.css" />
+		<link rel="stylesheet" href="css/my_alert.css" />
+		<link rel="stylesheet" href="css/my_shark.css" />
+		<link rel="stylesheet" href="css/all.css" />
+		<!--<link rel="stylesheet" href="css/main.css" />-->
+		<script type="text/javascript" src="jquery/jquery.min.js" ></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="bootstrap-table/bootstrap-table.js" ></script>
+		<script type="text/javascript" src="bootstrap-table/locale/bootstrap-table-zh-CN.js" ></script>
+		<script type="text/javascript" src="js/all.js" ></script>
+		<script type="text/javascript" src="js/my_alert.js" ></script>
+		<script type="text/javascript" src="js/my_shark.js" ></script>
+		<script type="text/javascript" src="js/my_progress.js" ></script>
+		<script src="http://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+		<script type="text/javascript" src="js/firebase.js" ></script>
+		<!--<script type="text/javascript" src="js/main.js" ></script>-->
+
+
+		<script type="text/javascript" src="js/firebase.js" ></script>
+		<script type="text/javascript" src="js/easeljs-NEXT.combined.js" ></script>
+		<script type="text/javascript" src="js/Html5DanMaku.js" ></script>
+
+		<link rel="stylesheet" href="css/Html5DanMaku.css" />
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="main_continer">
+		<div id="main_continer" class="main_continer">
+			<video id="video_continer" controls="controls" src="img/kyoani.mp4">
+						<p>你的浏览器他妈的不支持html视频</p>
+						<p>your mother fucker browser can not watch html video</p>
+						<p>貴様のbrowserがｈｔｍｌ動画を支援出来ない</p>
+					</video>
+			<div id="danmaku_continer">
+			</div>
+			<canvas id="danmaku_canvas" width="640" height="360"></canvas>
+		</div>
+		</div>
+		<div class="inputDIV">
+			<input type="text" id="inputDM" name="inputDM" class="form-control" placeholder="输入弹幕、弾幕を入力、input danmaku" required="" autofocus="">
+			<button id="sendbtn" class="btn btn-primary" type="button" onclick="">发送</button>
+		
+		</div>
+		<div class="inputDIV">
+		<table id="my_table"  
+	data-cache="false" 
+	data-height="400" 
+	data-show-toggle="true" 
+	data-show-columns="true" 
+	data-search="true" 
+	data-select-item-name="toolbar1"
+	data-pagination="true">
+	    <thead>
+	        <tr>
+	            <th data-field="time" data-formatter="timeFormatter">时间</th>
+	            <th data-field="text">弹幕</th>
+	            
+	            
+	        </tr>
+	    </thead>
+	</table>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+.my_progress
+			{
+					position: absolute !important;
+					left: 50% !important;
+					right: 50% !important;
+					top: 50% !important;
+					bottom: 50% !important;
+					color: #E3E3E3 !important;
+					width: 64px !important;
+					height: 64px !important;
+					font-size: 64px !important;
+					animation-name: myfirst2 !important;
+					animation-duration: 2s !important;
+					animation-iteration-count: infinite !important;
+					animation-timing-function: linear !important;
+					-moz-animation-name: myfirst2 !important;
+					-moz-animation-duration: 2s !important;
+					-moz-animation-iteration-count: infinite !important;
+					-moz-animation-timing-function: linear !important;
+					-ms-animation-name: myfirst2 !important;
+					-ms-animation-duration: 2s !important;
+					-ms-animation-iteration-count: infinite !important;
+					-ms-animation-timing-function: linear !important;
+					-webkit-animation-name: myfirst2 !important;
+					-webkit-animation-duration: 2s !important;
+					-webkit-animation-iteration-count: infinite !important;
+					-webkit-animation-timing-function: linear !important;
+					-o-animation-name: myfirst2 !important;
+					-o-animation-duration: 2s !important;
+					-o-animation-iteration-count: infinite !important;
+					-o-animation-timing-function: linear !important;
+					
+			}
+#my_progress_modal
+{
+	   background-color: rgba(10,10,10,0.5);
+	   opacity: 0.5 !important;
+}
+			
+			
+			@keyframes myfirst2
+			{
+			0% {transform: rotate(0deg);}
+			100% {transform: rotate(359deg);}
+			}
+			
+			@-moz-keyframes myfirst2/* Firefox */
+			{
+			0% {-moz-transform: rotate(0deg);}
+			100% {-moz-transform: rotate(359deg);}
+			}
+			
+			@-webkit-keyframes myfirst2/* Safari and Chrome */
+			{
+			0% {-webkit-transform: rotate(0deg);}
+			100% {-webkit-transform: rotate(359deg);}
+			}
+			
+			@-o-keyframes myfirst2/* Opera */
+			{
+			0% {-o-transform: rotate(0deg);}
+			100% {-o-transform: rotate(359deg);}
+			}
+			
+			@-ms-keyframes myfirst2/* Opera */
+			{
+			0% {-ms-transform: rotate(0deg);}
+			100% {-ms-transform: rotate(359deg);}
+			}

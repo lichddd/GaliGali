@@ -1,0 +1,34 @@
+#img_area
+{
+	width: 140px;
+	height: 140px;
+	  margin-left: 23px;
+}
+#img_input
+{
+	  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+#img_input_h
+{
+	  position: relative;
+  padding: 0px;
+}
+#img_input_h > p
+{
+	  margin: 5px 10px 5px 10px;
+}
+.video
+{
+	cursor: pointer;
+}
+.video_img
+{
+	
+}
+.vidoe_title
+{
+}
