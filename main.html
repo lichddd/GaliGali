@@ -26,9 +26,11 @@
 		<title></title>
 	</head>
 	<body>
-	<div class="continer">
+	<div class="continer container">
+			<a id="upNewVideo" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#myModal" role="button" onclick="reset()">投稿</a>
 
-		<a class="btn btn-danger" data-toggle="modal" data-target="#myModal" role="button">投稿</a>
+
+		
 		
 		
 		<div id="video_continer" class="container">
@@ -36,9 +38,7 @@
 		
 		</div>
 	</div>
-
-
-
+	
 
 
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -56,6 +56,8 @@
 								<label for="title" class="col-sm-2 control-label">标题</label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control mar5css" id="title" placeholder="最好不要写简称">
+										<span class="glyphicon glyphicon-pencil my"></span>
+									</input>
 								
 								
 								
@@ -64,9 +66,12 @@
 							</div>
 							<div class="form-group">
 								<label for="link" class="col-sm-2 control-label">链接地址</label>
-								<div class="col-sm-10">
+								<div class="col-sm-9" style="padding-right: 0px;">
 									<input type="text" class="form-control mar5css" id="link" placeholder="必须是mp4文件网路地址才可以">
-									
+										<span class="glyphicon glyphicon-facetime-video my"></span>
+										
+										
+									</input>
 									
 									<!--<input type="text" class="form-control" placeholder="例如 新疆、内蒙古、台湾等 不要加省 自治区" id="inputaddr1" aria-describedby="basic-addon1">
 									<span class="input-group-addon" id="basic-addon1">省</span>
@@ -76,15 +81,22 @@
 								-->
 								
 								</div>
+								<div class="col-sm-1" style="padding: 0px;" data-toggle="tooltip" data-placement="left" title="B站地址转换">
+									<span id="link_help_icon" class="glyphicon glyphicon-question-sign my" data-toggle="modal" data-target="#exchangeModal"></span>
+								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputdes" class="col-sm-2 control-label">封面</label>
 								<div class="col-sm-10">
-
-									<img id="img_area" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzE0MHgxNDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNGYwMTljMDdiOCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE0ZjAxOWMwN2I4Ij48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ1LjUiIHk9Ijc0LjUiPjE0MHgxNDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" class="img-thumbnail" alt="" />
-
-									<a id="img_input_h" class="btn btn-default" role="button"><input type="file" value="" id="img_input" /><p>选择</p></a>
 									
+									<img id="img_area" src="" class="img-thumbnail" alt="">
+									<input type="file" value="" id="img_input" />
+									</img>
+
+									
+									<input type="text" class="form-control mar5css" id="img_link" placeholder="或者填写B站转换中的图片地址,以链接为主">
+										<span class="glyphicon glyphicon-picture my"></span>
+									</input>
 								</div>
 							</div>
 							
@@ -93,6 +105,28 @@
 					<div class="modal-footer">
 						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
 						<button type="button" id="commitbtn" data-dismiss="modal" class="btn btn-primary">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="exchangeModal" tabindex="-1" role="dialog" aria-labelledby="exchangeModalLabel" aria-hidden="true">
+			<div class="modal-dialog" id="exchangeModal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+						</button>
+						<h5 class="modal-title" id="exchangeModalLabel">地址转换</h5>
+						<h6></h6>
+					</div>
+					<div class="modal-body">
+						<input type="text" class="form-control mar5css" id="avtext" placeholder="avxxxxxxxxxx">
+										
+									</input>
+					</div>
+					<div class="modal-footer">
+						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+						<button type="button" id="changebtn" data-dismiss="modal" class="btn btn-primary">转换</button>
 					</div>
 				</div>
 			</div>

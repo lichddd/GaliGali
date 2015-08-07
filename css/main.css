@@ -1,3 +1,11 @@
+#upNewVideo
+{
+  position: fixed;
+  z-index: 99999;
+  top: 20px;
+}
+
+
 #img_area
 {
 	width: 140px;
@@ -6,11 +14,13 @@
 }
 #img_input
 {
-	  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
+  position: absolute;
+  width: 140px;
+  height: 140px;
   opacity: 0;
+  top: 0px;
+  margin-left: 23px;
+  cursor: pointer;
 }
 #img_input_h
 {
@@ -31,4 +41,38 @@
 }
 .vidoe_title
 {
+}
+.glyphicon.my
+{
+  position: relative;
+  left: 35px;
+  top: -28px;
+  height: 0px;
+  width: 0px;
+  display: block;
+    color: gray;
+}
+#link
+{
+	/*padding-right: 40px;*/
+}
+#link_help_icon
+{
+height: 40px;
+  width: 40px;
+  left: -10px;
+  top: 15px;
+  cursor: pointer;
+}
+#exchangeModal
+{
+	margin-top: 60px;
+}
+#video_continer
+{
+	text-align: initial;
+}
+.continer
+{
+	text-align: right;
 }

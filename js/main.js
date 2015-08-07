@@ -1,14 +1,29 @@
 $().ready(function () {
 
-	
+	$('[data-toggle="popover"]').popover();
+	$('[data-toggle="tooltip"]').tooltip()
 	      $('#commitbtn').on('click',function (event) {
-      	if ($('#title').val().length >0 &&$('#link').val().length >0) {
+      	if ($('#title').val().length >0 &&$('#link').val().length >0&&($('#img_area').prop('src').length>0||$('#img_link').val().length >0)) {
 //        var addr = $('#inputaddr1').val()+" "+$('#inputaddr2').val();
 			
           var title = $('#title').val();
           var link = $('#link').val();
-          var img = $('#img_area').prop('src');
+          var img;
+          if ($('#img_link').val().length>0) {
+          	img = $('#img_link').val();
+          } else{
+          	img = $('#img_area').prop('src');
+          }
+          
           _firebase.newVideo(title,link,img,"lichddd");
+        }
+      });
+      	  $('#changebtn').on('click',function (event) {
+      	if ($('#avtext').val().length >0 &&$('#avtext').val().split('av').length>1) {
+
+
+		  window.open("http://www.bilibili.com/m/html5?aid="+$('#avtext').val().split('av')[1]+"&page=1");    
+			
         }
       });
 	 var input = document.getElementById("img_input");
@@ -75,4 +90,10 @@ function readFile(){
 //              result.innerHTML = '<img src="'+this.result+'" alt=""/>';
                 $('#img_area').prop('src',this.result);
         }
+}
+function reset () {
+	$('#img_area').prop('src','');
+	$('#title').val('');
+    $('#link').val('');
+    $('#img_link').val('');
 }
