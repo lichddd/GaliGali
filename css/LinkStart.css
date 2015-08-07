@@ -25,12 +25,13 @@ body {
   border-color: #666666;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
+   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
 }
 .continer
 {
-	background: radial-gradient(circle at center, #ffffff, #cccccc);
-width: 100%;
+  background: radial-gradient(circle at center, #ffffff, #cccccc);
+  width: 100%;
   height: 100%;
   margin: auto;
   top: 0;
@@ -40,6 +41,10 @@ width: 100%;
   position: absolute;
   transform-style: preserve-3d;
   perspective: 50px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 50px;
+  -moz-transform-style: preserve-3d;
+  -moz-perspective: 50px;
   overflow: hidden;
 }
 .comite_continer
@@ -54,6 +59,10 @@ width: 100%;
   position: absolute;
   transform-style: preserve-3d;
   perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+  -moz-transform-style: preserve-3d;
+  -moz-perspective: 1000px;
   overflow: hidden;
 }
 #main
@@ -62,6 +71,12 @@ width: 100%;
   height: 100%;  
   transform-style: preserve-3d;
   transform: translateZ(0px);
+  
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translateZ(0px);
+  -moz-transform-style: preserve-3d;
+  -moz-transform: translateZ(0px);
+  
   margin: auto;  
   position: absolute;  
   top: 0; left: 0; bottom: 0; right: 0;  
@@ -102,11 +117,15 @@ background: radial-gradient(circle at center, rgba(255, 255, 255,1),rgba(255, 25
 {
 	opacity: 1 !important;
 	transform: scale(1) rotateY(1080deg) !important;
+	-webkit-transform: scale(1) rotateY(1080deg) !important;
+	-moz-transform: scale(1) rotateY(1080deg) !important;
 }
 .link_start
 {
 	opacity: 0;
 	transform: scale(0) rotateY(0deg);
+	-webkit-transform: scale(0) rotateY(0deg);
+	-moz-transform: scale(0) rotateY(0deg);
 }
 #link_start
 {
@@ -230,6 +249,8 @@ width: 300px;
 height: 50px;
 	background-color:  #00B7FF;
 	transform-origin: 0px 25px;
+	-webkit-transform-origin: 0px 25px;
+	-moz-transform-origin: 0px 25px;
 	position: absolute;
 	transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
     

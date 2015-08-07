@@ -31,9 +31,13 @@ $().ready(function () {
 		sessionStorage.setItem('list',JSON.stringify(list));
 		setTimeout(function () {
 			$('#main').css('transform',' translateZ(1000px)');
+			$('#main').css('-webkit-transform',' translateZ(1000px)');
+			$('#main').css('-moz-transform',' translateZ(1000px)');
 			$('#filter').css('width','100%');
 			$('#filter').css('height','100%');
 			$('#filter').css('transform','scale(3)');
+			$('#filter').css('-webkit-transform','scale(3)');
+			$('#filter').css('-moz-transform','scale(3)');
 //		transform: scale(3);
 			setTimeout(function () {
 						window.location.href="main.html";
@@ -178,12 +182,16 @@ function timer () {
 	tempdiv.css('left',tempobj.left);
 	tempdiv.css('top',tempobj.top);
 	tempdiv.css('transform',tempobj.transform);
+	tempdiv.css('-webkit-transform',tempobj.transform);
+	tempdiv.css('-moz-transform',tempobj.transform);
 	tempdiv.data('reT',tempobj);
 	setTimeout(function () {
 		if (isreset) {
 			return;
 		}
 		tempdiv.css('transform',tempdiv.data('reT').retransform);
+		tempdiv.css('-webkit-transform',tempdiv.data('reT').retransform);
+		tempdiv.css('moz-transform',tempdiv.data('reT').retransform);
 	if (ddtime<=20) {
 //		reset();
 //		return;
@@ -211,6 +219,10 @@ function reset () {
 		$('#main div').each(function() {
 			$(this).css('transition','all 1s cubic-bezier(0.66,0.27,1,0.53) 0s');
 			$(this).css('transform',$(this).data('reT').transform);
+			$(this).css('-webkit-transition','all 1s cubic-bezier(0.66,0.27,1,0.53) 0s');
+			$(this).css('-webkit-transform',$(this).data('reT').transform);
+			$(this).css('-moz-transition','all 1s cubic-bezier(0.66,0.27,1,0.53) 0s');
+			$(this).css('-moz-transform',$(this).data('reT').transform);
 			var tttt=$(this);
 			setTimeout(function () {
 				tttt.remove();
