@@ -9,7 +9,7 @@ $().ready(function () {
 
 	$('#link_start_btn').click(function () {
 
-		ddtime=500;
+		ddtime=100;
 		isreset=false;
 			$('#link_start').removeClass('link_starting')
 	setTimeout(function () {
@@ -29,9 +29,20 @@ $().ready(function () {
 
 
 		sessionStorage.setItem('list',JSON.stringify(list));
-			
-			
-		window.location.href="main.html";
+		setTimeout(function () {
+			$('#main').css('transform',' translateZ(1000px)');
+			$('#filter').css('width','100%');
+			$('#filter').css('height','100%');
+			$('#filter').css('transform','scale(3)');
+//		transform: scale(3);
+			setTimeout(function () {
+						window.location.href="main.html";
+			},2500);
+		},10000);
+		
+		
+		
+//		window.location.href="main.html";
 		},function () {
 		reset();
 	});
