@@ -66,8 +66,6 @@ $().ready(function () {
       });
       
       
-      
-	_my_progress.progress();
 	_firebase.getDM(getUrlParam('id'),function (list) {
 		danmaku=list.slice(0);
 		nowdanmakulist=danmaku.slice(0);
@@ -78,18 +76,7 @@ $().ready(function () {
 		
 		
 		setTimeout(autoReReadDanmaku,autoReadTime);
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
-		_my_progress.finish();
-		
 		
 		
 		
@@ -101,7 +88,53 @@ $().ready(function () {
 	
 	
 	video=$('#video_continer');
-	video.prop('src',sessionStorage.getItem(getUrlParam('id')));
+	video.on('loadstart',function (e) {
+		_my_progress.progress();
+	});
+	video.on('canplay',function (e) {
+		_my_progress.finish();
+	});
+
+	
+	
+	video.prop('src',sessionStorage.getItem("link"+getUrlParam('id')));
+	video.on('error',function (e) {
+		_my_progress.progress();
+		console.log(e);
+		 console.log("获取原始地址失败");
+         console.log("通过B站ID获取新视频地址:"+sessionStorage.getItem("av"+getUrlParam('id')));
+         	$.ajax({
+    url: "https://galigaliserver.herokuapp.com/jsonp/getBiliBili/"+sessionStorage.getItem("av"+getUrlParam('id')),
+    aync: false,
+    cache: false,
+    dataType: "jsonp",
+    type: "get",
+    jsonp:"callback",
+    jsonpCallback:"success_jsonpCallback",
+    success: function(data) {
+    	_my_progress.finish();
+			console.log(data)
+			if(data.src)
+			{
+				video.prop('src',data.src);
+			}
+			else
+			{
+				_my_alert.showAlert("读取视频地址失败");
+			}
+			
+    },
+    error: function(xhr) {
+    	_my_progress.finish();
+         console.log(xhr)
+         _my_alert.showAlert("读取视频地址失败");
+      return;
+    }
+  });
+		
+		
+		
+	})
 //	console.log(video);
 	
 	d.setHours(0,0,0,0);
