@@ -27,7 +27,6 @@ $().ready(function () {
 //		var ll=new Array();
 
 
-
 		sessionStorage.setItem('list',JSON.stringify(list));
 		setTimeout(function () {
 			$('#main').css('transform',' translateZ(1000px)');

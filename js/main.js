@@ -8,6 +8,12 @@ $().ready(function () {
 			
           var title = $('#title').val();
           var link = $('#link').val();
+          var av = $('#avlink').val().split('av')[1];
+          if (av) {
+          	
+          } else{
+          	av=0;
+          }
           var img;
           if ($('#img_link').val().length>0) {
           	img = $('#img_link').val();
@@ -15,7 +21,7 @@ $().ready(function () {
           	img = $('#img_area').prop('src');
           }
           
-          _firebase.newVideo(title,link,img,"lichddd");
+          _firebase.newVideo(title,link,img,"lichddd",av);
         }
       });
       	  $('#changebtn').on('click',function (event) {
@@ -43,7 +49,8 @@ $().ready(function () {
 			
 			
 			tempdiv.data('videoinfo',data);
-			sessionStorage.setItem(data.id,data.link);
+			sessionStorage.setItem("link"+data.id,data.link);
+			sessionStorage.setItem("av"+data.id,data.av);
 	});
 	
 	

@@ -1,0 +1,98 @@
+table {
+	border-collapse: collapse;
+
+}
+.uploadify-queue { width: 200px; }
+.ui-jqgrid-hdiv { display: none; }
+.jqgroup td span { display: none; }
+.jqgroup
+{
+	border-left: 1px solid rgb(208, 213, 217);
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { .jqgroup
+{
+	border-right: 1px solid rgb(208, 213, 217);
+} }
+
+.jqgroup td
+{
+	border: none !important;
+background: rgb(208, 213, 217) !important;
+padding: 5px 10px 5px 20px !important;
+color: #2E4459;
+font-size: 14px;
+}
+.ui-jqgrid-view
+{
+	border: none;
+}
+.ui-jqgrid tr.jqgrow {
+    border-width: 1px 1px 1px 1px;
+    border-style: solid solid solid solid;
+    border-color: #9CB8CE #9CB8CE #9CB8CE #9CB8CE;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+}
+.mytitle
+{
+	background: rgb(195,222,241);
+	 border-width: 1px 1px 1px 1px;
+    border-style: solid solid solid solid;
+    border-color: #9CB8CE #9CB8CE #9CB8CE #9CB8CE;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+}
+.mytitle td{ font-weight:bold; height:22px;}
+.ui-jqgrid{
+    background: none;
+}
+.kuso-line
+{
+	background: none;
+	height: 30px;
+	
+}
+.kuso-line td
+{
+
+background: none;
+margin:-10px;
+border-bottom: 1px solid rgb(157, 183, 206);
+width: 9999px;
+left: -1000px;
+position: absolute;
+height: 10px;
+}
+.ui-jqgrid-bdiv
+{
+	overflow: initial !important;
+	overflow: visible !important;
+}
+.ui-jqgrid-bdiv > div
+{
+	margin-bottom: 30px;
+}
+
+.tablepadding
+{
+	overflow-x: hidden;
+overflow-y: auto;
+}
+.uploadify-queue{ width:220px}
+.uploadify-progress { width: 195px; }
+.uploadify-queue-item .fileName { width: 195px; }
+.uploadify-queue-item .data { position: relative; top: 2px; /*left: 200px;*/ }
+
+.dc-ul li{ height:30px; line-height:30px;}
+.dc-ul li input{ vertical-align:middle;}
+
+#entryPointList
+{
+	overflow: hidden;
+}

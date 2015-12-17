@@ -23,7 +23,6 @@ var My_Progress = function(){
 
     
     this.progress =function(){  
-
     		$("#my_progress_modal").show();
     }  
     this.finish =function(){  

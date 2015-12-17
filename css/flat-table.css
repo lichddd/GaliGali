@@ -1,0 +1,123 @@
+@charset "utf-8";
+/*表格*/
+table,.ui-widget,.ui-widget button { font-size: 12px; font-family:"Microsoft YaHei","SimSun","SimHei",Arial,sans-serif;  }
+.ui-jqgrid .ui-jqgrid-htable{ border-bottom:1px solid #9cb8ce;}
+.ui-widget{font-size: 12px;}
+/*.ui-jqgrid-pager .ui-pager-control { background-color: #fff; }*/
+.ui-jqgrid .ui-jqgrid-titlebar { _z-index: 1; }
+.ui-widget-header { background: #699dcb; }
+.ui-widget-content .ui-state-default{ border:none;}
+.ui-jqgrid-htable .ui-state-default { border-right: 1px solid #9cb8ce; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { background: #c3ddf1; }
+.ui-pager-control .ui-state-hover{ background:none;border:1px solid #fff;}
+.ui-jqgrid-htable .ui-state-hover { border-right: 1px solid #9cb8ce; }
+.ui-jqgrid-labels .ui-state-default { background: #c3ddf1; }
+.ui-jqgrid tr.jqgrow { border: 1px solid #9cb8ce; border-left: none;}
+.ui-widget-content{ background:none;background-color:#f3fafb; border:none;}
+.ui-jqgrid-view{border-left:1px solid #9cb8ce;}
+.ui-jqgrid .ui-jqgrid-hdiv{border-top:1px solid #9cb8ce!important;}
+
+/*pager*/
+.ui-jqgrid .ui-jqgrid-pager{ padding:20px 0!important;background: #fff;}
+.ui-widget-content .ui-icon{ text-indent:0; width:55px; height:20px; text-align:center;}
+.ui-jqgrid .ui-separator{ border:none;}
+.ui-widget-content .ui-icon-seek-first,.ui-widget-content .ui-icon-seek-end{ background:none;}
+.ui-widget-content .ui-icon-seek-prev,.ui-widget-content .ui-icon-seek-next{ background:#f3fafb;border:1px solid #9cb8ce; border-radius:3px;}
+.ui-widget-content .ui-state-disabled{opacity:1;}
+.ui-jqgrid .ui-pg-input {border: 1px solid #9cb8ce; border-radius:3px;text-align: right;height: auto;font-size: 14px;color: #e97300;}
+.ui-jqgrid .ui-pg-selbox{ display:none;}
+
+/*弹框*/
+.ui-corner-all{ border-radius:0;}
+.ui-dialog
+{
+	border-radius: 5px 5px 0px 0px;
+	padding: 0px;
+}
+.ui-widget-header
+{
+	border: 0px;
+}
+.ui-dialog .ui-dialog-titlebar
+{ font-size:14px;
+	/*padding: 0px;*/
+}
+
+.ui-dialog .ui-dialog-titlebar-close{
+border-radius: 0px 5px 0px 0px;
+	position: absolute;
+margin: 0px;
+right: 0px;
+width: 35px;
+bottom: 0px;
+top: 0px;
+padding: 0px;
+height: auto;
+	color: white;
+		border: 0px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover{ 
+	background:#de342c;
+
+}
+.ui-dialog-titlebar-close .ui-icon-closethick
+{
+	background: none;
+	font-size: 0px;
+position: absolute;
+width: 100%;
+height: 100%;
+text-align: center;
+line-height: 1;
+text-indent: 0;
+cursor: pointer;
+}
+.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr{ height:28px;}
+.ui-jqgrid tr.ui-row-ltr td{ color:#2e4459; height:28px; padding:0 15px;text-overflow:ellipsis;
+-o-text-overflow:ellipsis;}
+.ui-dialog-titlebar-close .ui-icon-closethick:before
+{
+	content: "×";
+	font-size: 32px;
+}
+
+.ui-dialog .ui-dialog-content{ background:#fff; /*border-bottom:1px solid #ccd3d4;padding:36px 22px;*/ padding:0;}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{ color:#2e4459;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{ background:#fad42e;
+}
+
+
+
+.zebra{ background-color:#fff;}
+.captionBtn{line-height:30px;height:30px; font-size:14px;}
+/*.ui-button-text{ background-color: #dbedfb; border:1px solid #9cb8ce; }
+.ui-button-text:hover { background-color: #f1f9ff; }
+*/
+
+#Page{ border-radius:none;}
+.treegrid{ background-color:#fff7ca;}
+/*弹框按钮*/
+.ui-dialog-buttonpane{ background:#e1e1e1;}
+.ui-button-text{border-radius: 3px; background:#396f9e; color:#fff; font-size:14px;}
+.ui-dialog .ui-dialog-buttonpane{ text-align:center; margin:0;}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{ float:none;}
+.ui-dialog-buttonset > button{ margin-left: 12% !important; margin-right: 10% !important;}
+
+.tips span { color: rgb(227, 108, 109); font-size: 14px; vertical-align: middle; }
+.psd-icon {background: url('../images/icons.png') no-repeat -2px -2px;display: inline-block; width: 17px; height: 17px; margin-right: 2px; }
+
+.progress
+{
+	height: 12px;
+border-radius: 10px;
+}
+.progress-bar
+{
+	background-color: rgb(63, 161, 232);
+}
+
+.ui-widget-overlay{ background:#000;opacity:0 ; filter:alpha(Opacity=0);}
+.ui-dialog{box-shadow: 3px 3px 10px #ccc;}
+.ui-jqgrid .loading{ border:1px solid #79b7e7;background:#f5f8f9;}

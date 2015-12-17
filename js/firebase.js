@@ -32,16 +32,19 @@ var FireBase = function(){
 		);
 	}
 	
-	this.newVideo=function  (title,link,img,upper) {
+	this.newVideo=function  (title,link,img,upper,av) {
 		_my_progress.progress();
-		myDataRef.child('videos').push(
-			{
+		var pp=myDataRef.child('videos').push();
+		
+		pp.set({
 			  title: title,
 			  link: link,
 			  img:img,
-			  upper:upper
-			},
-			function(error) {
+			  upper:upper,
+			  av:av,
+			  date:Firebase.ServerValue.TIMESTAMP,
+			  id:pp.key()
+			},function(error) {
 			_my_progress.finish();
 			  if (error) {
 
@@ -49,8 +52,26 @@ var FireBase = function(){
 			  } else {
 			    console.log('发送弹幕成功');
 			  }
-			}
-		);
+			});
+		
+//		myDataRef.child('videos').push(
+//			{
+//			  title: title,
+//			  link: link,
+//			  img:img,
+//			  upper:upper,
+//			  id:Firebase.ServerValue.TIMESTAMP
+//			},
+//			function(error) {
+//			_my_progress.finish();
+//			  if (error) {
+//
+//			    console.log('发送弹幕失败');
+//			  } else {
+//			    console.log('发送弹幕成功');
+//			  }
+//			}
+//		);
 	}
 	
 	this.getDM=function (id,onReturn) {
