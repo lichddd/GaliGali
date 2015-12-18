@@ -29,7 +29,7 @@ function autoReReadDanmaku () {
 		_firebase.getDM(getUrlParam('id'),function (list) {
 		danmaku=list.slice(0);
 		nowdanmakulist=danmaku.slice(0);
-		console.log(list);
+//		console.log(list);
 			table.bootstrapTable('load',list);
 		
 		
@@ -69,7 +69,7 @@ $().ready(function () {
 	_firebase.getDM(getUrlParam('id'),function (list) {
 		danmaku=list.slice(0);
 		nowdanmakulist=danmaku.slice(0);
-		console.log(list);
+//		console.log(list);
 			table=$("#my_table").bootstrapTable({
                     data: list
                 });
@@ -100,8 +100,8 @@ $().ready(function () {
 	video.prop('src',sessionStorage.getItem("link"+getUrlParam('id')));
 	video.on('error',function (e) {
 		_my_progress.progress();
-		console.log(e);
-		 console.log("获取原始地址失败");
+//		console.log(e);
+		 console.error("获取原始地址失败");
          console.log("通过B站ID获取新视频地址:"+sessionStorage.getItem("av"+getUrlParam('id')));
          	$.ajax({
     url: "https://galigaliserver.herokuapp.com/jsonp/getBiliBili/"+sessionStorage.getItem("av"+getUrlParam('id')),
@@ -113,7 +113,7 @@ $().ready(function () {
     jsonpCallback:"success_jsonpCallback",
     success: function(data) {
     	_my_progress.finish();
-			console.log(data)
+//			console.log(data)
 			if(data.src)
 			{
 				video.prop('src',data.src);
@@ -126,7 +126,7 @@ $().ready(function () {
     },
     error: function(xhr) {
     	_my_progress.finish();
-         console.log(xhr)
+         console.error(xhr)
          _my_alert.showAlert("读取视频地址失败");
       return;
     }
@@ -227,7 +227,7 @@ function ontime2() {
 			}
 			danmakunowtimeX=Math.floor(video.prop('currentTime'));
 		}
-		console.log(Math.floor(video.prop('currentTime')));
+//		console.log(Math.floor(video.prop('currentTime')));
 //		console.log(danmakunowtime);
 
 

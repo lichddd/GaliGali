@@ -178,7 +178,7 @@ function timer () {
 	var tempcolor=colorlist[Math.floor(Math.random()*colorlist.length)];
 
 	var tempobj=csslist[Math.floor(Math.random()*csslist.length)];
-	console.log(tempobj);
+//	console.log(tempobj);
 	tempdiv.css('background','linear-gradient(to right,'+tempcolor+','+tempcolor+' 95%, rgba(0,0,0,0))');
 	tempdiv.css('left',tempobj.left);
 	tempdiv.css('top',tempobj.top);

@@ -90,7 +90,7 @@ var FireBase = function(){
 
   			
 		}, function (err) {
-			console.log('读取弹幕失败');
+			console.error('读取弹幕失败');
 		  // code to handle read error
 		});
 	}
@@ -132,15 +132,15 @@ var FireBase = function(){
   			var list=[];
   			dataSnapshot.forEach(function (data) {
   				list.push(data);
-  				console.log(data.val());
-  				console.log(data);
+//				console.log(data.val());
+//				console.log(data);
 //				console.log(data.val().time+':'+data.val().text);
   			})
   			onReturn(list);
 
   			
 		}, function (err) {
-			console.log('读取弹幕失败');
+			console.error('读取弹幕失败');
 		  // code to handle read error
 		});
 	}
@@ -158,7 +158,7 @@ var FireBase = function(){
 
   			
 		}, function (err) {
-			console.log('弹幕动态增加读取失败');
+			console.error('弹幕动态增加读取失败');
 		  // code to handle read error
 		});
 	}
