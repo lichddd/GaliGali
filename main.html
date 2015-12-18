@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
-				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="renderer" content="webkit"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0;" name="viewport" />
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
 		<!--<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />-->
 		<link rel="stylesheet" href="css/my_progress.css" />
@@ -11,37 +13,36 @@
 		<link rel="stylesheet" href="css/my_shark.css" />
 		<link rel="stylesheet" href="css/all.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<script type="text/javascript" src="jquery/jquery.min.js" ></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
-		<script type="text/javascript" src="js/my_alert.js" ></script>
-		<script type="text/javascript" src="js/my_shark.js" ></script>
-		<script type="text/javascript" src="js/my_progress.js" ></script>
+		<script type="text/javascript" src="jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/my_alert.js"></script>
+		<script type="text/javascript" src="js/my_shark.js"></script>
+		<script type="text/javascript" src="js/my_progress.js"></script>
 		<script src="http://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-		<script type="text/javascript" src="js/firebase.js" ></script>
-		<script type="text/javascript" src="js/all.js" ></script>
-		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/firebase.js"></script>
+		<script type="text/javascript" src="js/all.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<script>
-
-</script>
+		</script>
 		<title></title>
 	</head>
+
 	<body>
-	<div class="continer container">
-			<a id="upNewVideo" class="btn btn-lg btn-default" data-toggle="modal" data-target="#myModal" role="button" onclick="reset()">投稿</a>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">GaliGali</a>
+				<a id="upNewVideo" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal" role="button" onclick="reset()">投稿</a>
 
+			</div>
+		</nav>
+		<div class="continer container">
 
-		
-		
-		
-		<div id="video_continer" class="container">
+			<div id="video_continer" class="container">
 
-		
+			</div>
 		</div>
-	</div>
-	
 
-
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -66,11 +67,11 @@
 							</div>
 							<div class="form-group">
 								<label for="link" class="col-sm-2 control-label">链接地址</label>
-								<div class="col-sm-9" style="padding-right: 0px;">
+								<div class="col-sm-10">
 									<input type="text" class="form-control mar5css" id="link" placeholder="必须是mp4文件网路地址才可以">
 										<span class="glyphicon glyphicon-facetime-video my"></span>
 										
-										
+										<span id="link_help_icon" class="glyphicon glyphicon-question-sign my"  style="padding: 0px;  margin-left: -10px;" data-toggle="tooltip" data-placement="left" title="B站地址转换" ><div style="  width: 15px;height: 15px;  position: absolute;  top: 0px;  left: 0px;" data-toggle="modal" data-target="#exchangeModal"></div></span>
 									</input>
 									
 									<!--<input type="text" class="form-control" placeholder="例如 新疆、内蒙古、台湾等 不要加省 自治区" id="inputaddr1" aria-describedby="basic-addon1">
@@ -81,13 +82,11 @@
 								-->
 								
 								</div>
-								<div class="col-sm-1" style="padding: 0px;  margin-left: -10px;" data-toggle="tooltip" data-placement="left" title="B站地址转换">
-									<span id="link_help_icon" class="glyphicon glyphicon-question-sign my" data-toggle="modal" data-target="#exchangeModal"></span>
-								</div>
+
 							</div>
 							<div class="form-group">
 								<label for="link" class="col-sm-2 control-label">B站源</label>
-								<div class="col-sm-9" style="padding-right: 0px;">
+								<div class="col-sm-10">
 									<input type="text" class="form-control mar5css" id="avlink" placeholder="格式:avXXX">
 										<span class="glyphicon glyphicon-btc my"></span>
 										

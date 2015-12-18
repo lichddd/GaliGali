@@ -3,12 +3,13 @@ $().ready(function () {
 	$('[data-toggle="popover"]').popover();
 	$('[data-toggle="tooltip"]').tooltip()
 	      $('#commitbtn').on('click',function (event) {
-      	if ($('#title').val().length >0 &&$('#link').val().length >0&&($('#img_area').prop('src').length>0||$('#img_link').val().length >0)) {
+	      	          var av = $('#avlink').val().split('av')[1];
+      	if ($('#title').val().length >0 &&($('#link').val().length >0||av)&&($('#img_area').prop('src').length>0||$('#img_link').val().length >0)) {
 //        var addr = $('#inputaddr1').val()+" "+$('#inputaddr2').val();
 			
           var title = $('#title').val();
           var link = $('#link').val();
-          var av = $('#avlink').val().split('av')[1];
+
           if (av) {
           	
           } else{
@@ -42,7 +43,7 @@ $().ready(function () {
 	
 	JSON.parse(sessionStorage.getItem('list')).forEach(function (data) {
 			
-			var tempdiv=$('<a href="video.html?id='+data.id+'&link='+data.link+'" target="_blank"><div class="video col-md-2" onclick="gotoVideo(event)">'+
+			var tempdiv=$('<a href="video.html?id='+data.id+'&link='+data.link+'" target="_blank"><div class="video col-md-2 col-sm-6 col-xs-12" onclick="gotoVideo(event)">'+
 				'<img class="video_img img-thumbnail" src="'+data.img+'"/>'+
 				'<h4 class="vidoe_title">'+data.title+'</h4>'+
 			'</div></a>').appendTo('#video_continer');
